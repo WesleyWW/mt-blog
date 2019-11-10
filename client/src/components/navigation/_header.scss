@@ -1,0 +1,37 @@
+.header {
+    @include flexRowCenter;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .header-brand {
+        @include flexRowCenter;
+        left: 0;
+        padding-left: 10px;
+
+        .header-brand-img {
+            margin-left: 4px;
+            height: 2.6rem;
+        }
+    }
+
+    .header-links {
+        @include flexRowCenter;
+        flex-grow: 1;
+        border-bottom: 6px solid $primary-color;
+
+        .header-link {
+            text-decoration: none;
+            color: $primary-color;
+        }
+    }
+
+    .header-social-icons {
+        padding: 10px;
+
+        .fab {
+            margin: 15px;
+            color: $primary-color;
+        }
+    }
+}

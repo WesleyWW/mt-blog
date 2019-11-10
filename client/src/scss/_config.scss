@@ -1,0 +1,21 @@
+$primary-color: #00637c;
+$secondary-color: #DFB301;
+//Google fonts
+$headline-text: 'Merriweather', serif;  
+$article-text: 'Montserrat', sans-serif;
+//welcome image
+
+@mixin flexRowCenter {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumnCenter {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
