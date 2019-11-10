@@ -22,7 +22,7 @@ export default class CreateBlog extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/blog/'+ this.props.match.params.id)
+        axios.get(this.props.match.params.id)
             .then(response => {
                 this.setState({
                     author: response.data.author,
@@ -65,7 +65,7 @@ export default class CreateBlog extends Component {
         }
 
 
-        axios.post('http://localhost:5000/blog/update/' + this.props.match.params.id, blog)
+        axios.post('update/' + this.props.match.params.id, blog)
             .then(res => console.log(res.data));
             // window.location = '/';
     }

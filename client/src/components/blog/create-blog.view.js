@@ -77,13 +77,13 @@ export default class CreateBlog extends Component {
         data.append('date', this.state.date);
 
 
-        axios.post('http://localhost:5000/blog/add', data)
+        axios.post('blog/add', data)
         .then(response => console.log(response.data));
         window.location = '/blog';
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/blog/')
+        axios.get('blog')
             .then(response => {
                 this.setState({ blogs: response.data })
             })
@@ -100,7 +100,7 @@ export default class CreateBlog extends Component {
 
     deleteBlog(id) {
         console.log(id);
-        axios.delete('http://localhost:5000/blog/'+id)
+        axios.delete('blog/'+id)
             .then(res => console.log(res))
 
         this.setState({

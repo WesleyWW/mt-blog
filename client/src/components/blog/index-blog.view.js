@@ -37,7 +37,7 @@ export class IndexBlog extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/blog/'+this.props.match.params.id)
+        axios.get(this.props.match.params.id)
             .then(response => {
                 this.setState({
                     indexBlog: {
@@ -54,7 +54,7 @@ export class IndexBlog extends Component {
                 console.log(error); 
             });
 
-        axios.get('http://localhost:5000/blog/suggested')
+        axios.get('suggested')
             .then(response => {
                 this.setState({
                     suggestedBlogs: response.data

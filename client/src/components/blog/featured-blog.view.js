@@ -13,7 +13,7 @@ export class Featured extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/blog/latest')
+        axios.get('blog/latest')
             .then(response => {
                 this.setState({ 
                     featuredBlog: response.data

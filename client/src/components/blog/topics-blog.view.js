@@ -24,7 +24,7 @@ export class TopicsBlog extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/blog/topics/finance')
+        axios.get('blog/topics/finance')
             .then(res => {
                 this.setState({
                     financeTopicPosts: res.data
@@ -32,14 +32,14 @@ export class TopicsBlog extends Component {
             })
             .catch(err => {console.log(err)});
             
-        axios.get('http://localhost:5000/blog/topics/education')
+        axios.get('blog/topics/education')
             .then(res => {
                 this.setState({
                     educationTopicPosts: res.data
                 })
             })
             .catch(err => {console.log(err)});
-        axios.get('http://localhost:5000/blog/topics/health')
+        axios.get('blog/topics/health')
             .then(res => {
                 this.setState({
                     healthTopicPosts: res.data
