@@ -14,7 +14,7 @@ app.use(express.json());
 
 const uri = require('./config/keys').mongoURI;
 
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI || uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connection established'))
     .catch(err => console.log(err));
 // const connection = mongoose.connection;
@@ -32,7 +32,7 @@ if(process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 
     app.get('*', (req, res) => {
-        res.sendFild(path.resolve(__dirname, 'client', 'build', 'index.html'));
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
     });
 }
 
