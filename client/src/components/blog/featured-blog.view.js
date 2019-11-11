@@ -11,7 +11,7 @@ export class Featured extends Component {
 
         this.state = { featuredBlog: [] };
     }
-
+ 
     componentDidMount() {
         axios.get('blog/latest')
             .then(response => {
