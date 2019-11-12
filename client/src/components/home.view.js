@@ -64,7 +64,7 @@ export default class Home extends Component {
                 <section className="featured-blog-section">
                     <Featured />
                     <EmailForm />
-                    <Topics />
+                    {/* <Topics /> */}
                 </section>
             </div>
         )
