@@ -8,21 +8,20 @@ export default class CreateBlog extends Component {
         this.onChangeAuthor = this.onChangeAuthor.bind(this);
         this.onChangeTitle = this.onChangeTitle.bind(this);
         this.onChangeBody = this.onChangeBody.bind(this);
-        this.onChangeImg = this.onChangeImg.bind(this);
+        // this.onChangeImg = this.onChangeImg.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
 
         this.state = {
             author: "",
             title: "",
-            body: "",
-            date: new Date()
-            // postImage: null
+            body: ""
         }
     }
 
     componentDidMount() {
-        axios.get(this.props.match.params.id)
+        var id = this.props.match.params.id;
+        axios.get('/blog/'+id)
             .then(response => {
                 this.setState({
                     author: response.data.author,
@@ -51,9 +50,9 @@ export default class CreateBlog extends Component {
 
         this.setState({ body: e.target.value });
     }
-    onChangeImg(e) {
-        this.setState({ postImage: e.target.files[0] });
-    }
+    // onChangeImg(e) {
+    //     this.setState({ postImage: e.target.files[0] });
+    // }
 
     onSubmit(e) {
         e.preventDefault();
@@ -65,7 +64,7 @@ export default class CreateBlog extends Component {
         }
 
 
-        axios.post('update/' + this.props.match.params.id, blog)
+        axios.post('/blog/update/' + this.props.match.params.id, blog)
             .then(res => console.log(res.data));
             // window.location = '/';
     }
