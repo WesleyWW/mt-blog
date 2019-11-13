@@ -16,71 +16,40 @@
 }
 
 .home .home-welcome {
-  margin: auto;
-  height: 100vh;
+  min-height: 75vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
-.home .home-welcome .signup {
-  width: 400px;
-  margin: 20px 30px;
-  padding: 20px;
-  background-color: #00637c;
-  color: #ffffff;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-}
-
-.home .home-welcome .topics {
-  width: 100%;
+.home .home-welcome .welcome-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.home .home-welcome .topics .topic {
-  background-color: #00637c;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 150px auto;
+  padding: 25px;
+  width: 64%;
+  background-color: rgba(0, 99, 124, 0.8);
   color: #ffffff;
-  width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-}
-
-.home .home-welcome .topics .topic .topic-img {
-  height: 100px;
-  width: 100px;
-  padding: 5px;
-  margin: auto;
-}
-
-.home .home-welcome .topics .topic .topic-text {
-  padding: 6px;
-}
-
-.home .home-welcome .topics .topic .topic-text h3 {
-  width: 100%;
-  margin-bottom: 5px;
-  border-bottom: 2px solid #ffffff;
 }
 
 .home .featured-blog-section {
   min-height: 50vh;
+  padding: 50px 100px;
 }
 
 #email-form {
@@ -91,7 +60,7 @@
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #ffffff;
 }
@@ -102,8 +71,8 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -129,7 +98,7 @@
 
 #email-form form .form-group .form-control {
   line-height: 2.2rem;
-  width: 300px;
+  width: 175px;
 }
 
 #email-form form .form-group #btn-newsletter {
@@ -471,6 +440,40 @@
   padding: 20px 20px;
 }
 
+.blog-container .blog-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blog-container .blog-info #blog-title-auth-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .blog-container .blog-title {
   margin-bottom: 20px;
   color: #00637c;
@@ -498,18 +501,28 @@ body h1, body h2, body h3, body h4 {
 }
 
 body h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 body a {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   margin: 15px;
+  color: #00637c;
 }
 
 body p {
   font-size: 1.2rem;
   font-family: "Montserrat", sans-serif;
+}
+
+body .section-title {
+  width: 70%;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #00637c;
+  color: #ffffff;
+  text-align: center;
 }
 
 body .button {

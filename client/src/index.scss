@@ -26,18 +26,28 @@ body {
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   a {
     font-family: $article-text;
     text-decoration: none;
     margin: 15px;
+    color: $primary-color;
   }
 
   p {
     font-size: 1.2rem;
     font-family: $article-text;
+  }
+
+  .section-title {
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: $primary-color;
+    color: #ffffff;
+    text-align: center;
   }
 
   .button {

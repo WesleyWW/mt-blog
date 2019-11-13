@@ -5,14 +5,15 @@
     background-color: grey;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
     font-family: $article-text;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #ffffff;
+
 
     
     form {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
 
@@ -27,7 +28,7 @@
 
             .form-control {
                 line-height: 2.2rem;
-                width: 300px;
+                width: 175px;
             }
 
             #btn-newsletter {

@@ -4,16 +4,20 @@ import axios from 'axios'
 
 const Blog = props => (
     <div className="blog-container">
-        <h2><Link className="blog-title" to={"/blog/"+props.blog._id}>{props.blog.title}</Link></h2>
-        <img className="blog-img" src={props.blog.postImage} alt="Current Blog" />
-        <div>
-            <h4 className="blog-author">{props.blog.author}</h4>
-        <small className="blog-date">{props.blog.date.substring(0,10)}</small>
+        <div className="blog-info">
+            <img className="blog-img" src={props.blog.postImage} alt="Current Blog" />
+            <div id="blog-title-auth-container">
+                <h2><Link className="blog-title" to={"/blog/"+props.blog._id}>{props.blog.title}</Link></h2>
+                <h4 className="blog-author">{props.blog.author}</h4>
+            </div>
         </div>
-        <p className="blog-body">{props.blog.body}</p>
-        <br />
-        <Link to={"/blog/edit/"+props.blog._id} className="btn btn-primary">Edit</Link>
-        <button onClick={() => { props.deleteBlog(props.blog._id) }} className="btn-delete">Delete</button>
+        <div className="blog-content">
+            <p className="blog-body">{props.blog.body}</p>
+            <br />
+            <small className="blog-date">{props.blog.date.substring(0,10)}</small>
+            <Link to={"/blog/edit/"+props.blog._id} className="button">Edit</Link>
+            <Link to="#" onClick={() => { props.deleteBlog(props.blog._id) }} className="button">Delete</Link>
+        </div>
     </div>
 )
 

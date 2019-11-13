@@ -13,7 +13,7 @@ export class Featured extends Component {
     }
  
     componentDidMount() {
-        axios.get('blog/latest')
+        axios.get('/blog/latest')
             .then(response => {
                 this.setState({ 
                     featuredBlog: response.data
@@ -27,11 +27,12 @@ export class Featured extends Component {
     render() {
         return (
             <div className="featured-blog">
-                <h2 className="featured-blog-header"><Link to={'/blog/'+ this.state.featuredBlog._id }>{ this.state.featuredBlog.title }</Link></h2>
-                {/* <h2 className="featured-blog-header"><a href='/blog/'>{ this.state.featuredBlog.title }</a></h2> */}
+                
+                
                 <div className="featured-blog-content">
                     <img className="featured-blog-img" src={ this.state.featuredBlog.postImage } alt="featured blog" />
                     <div className="container">
+                        <h2 className="featured-blog-header"><Link to={'/blog/'+ this.state.featuredBlog._id }>{ this.state.featuredBlog.title }</Link></h2>
                         <div className="featured-blog-author">
                             <img src={AuthorImg} alt="W.Wyane.W" />
                             <a href="/" className="blog-link">{ this.state.featuredBlog.author }</a>
@@ -39,7 +40,7 @@ export class Featured extends Component {
                         <p className="featured-blog-preview">
                             { this.state.featuredBlog.body }    
                         </p>
-                        <a className="button" href="/">Read More >></a>
+                        <Link className="button" to={'/blog/'+ this.state.featuredBlog._id }>Read More >></Link>
                     </div>
                 </div>
             </div>

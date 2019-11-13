@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 
 //welcome section images
 import Bg from '../assets/climb.jpeg';
-import Finance from '../assets/dollar-seeds.jpeg';
-import Education from '../assets/chess.jpeg';
-import Health from '../assets/broken-bear.jpeg';
+
 
 //import blog views
 import Featured from './blog/featured-blog.view';
@@ -23,49 +21,27 @@ export default class Home extends Component {
         return(
             <div className="home">
                 <section className="home-welcome" style={ welcomeStyles }>
-                    <div className="flex-row">
-                        <div className="signup">
-                            <h3>Here at Millennial Tactics, we're focused on how we go about
-                                Adulting and Leveling Up.   It's hard sometimes, but we got you
-                                with the inside scoop.
-                            </h3>
-                        </div>
-                    </div>
-                    <div className="flex-row topics">
-                        <div className="topic">
-                            <img className="topic-img" src={Finance} alt="topic-img" />
-                            <div className="topic-text">
-                                <h3>Finance</h3>
-                                <p>From how you make ends meet to how you retire comfortable, 
-                                    we'll get into all of it.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="topic">
-                            <img className="topic-img" src={Education} alt="topic-img" />
-                            <div className="topic-text">
-                                <h3>Education</h3>
-                                <p>From how you make ends meet to how you retire comfortable, 
-                                    we'll get into all of it.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="topic">
-                            <img className="topic-img" src={Health} alt="topic-img" />
-                            <div className="topic-text">
-                                <h3>Health</h3>
-                                <p>From how you make ends meet to how you retire comfortable, 
-                                    we'll get into all of it.
-                                </p>
-                            </div>
-                        </div>
+                    <div className="welcome-text">
+                        <h1>Welcome to Millennial Tactics</h1>
+                        <p>
+                            Here at Millennial Tactics, I look into the methods millenials
+                            are using in their efforts to level up.  There are many ways we
+                            are trying to improve ourselves daily and I want this to be a hub
+                            where new strategies can be discovered.  Whether it's prepping for
+                            a career change, a new diet, or an investment trend, I want to 
+                            cover it if it is making millennial lives better.
+                        </p>
                     </div>
                 </section>
                 <section className="featured-blog-section">
+                    <h1 className="section-title">Featured Blog</h1>
+
                     <Featured />
-                    <EmailForm />
-                    <Topics />
                 </section>
+                <EmailForm />
+                <h1 className="section-title">Browse New Blogs By Topic</h1>
+                <Topics />
+
             </div>
         )
     }
